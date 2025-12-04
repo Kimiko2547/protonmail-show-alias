@@ -14,12 +14,13 @@
 ## Install (Tampermonkey/Violentmonkey)
 1. Install a userscript manager (Tampermonkey or Violentmonkey).
 2. Create a new script and paste the contents of the userscript **or** install from file:
-   - **Userscript file**: [protonmail-show-alias.user.js](sandbox:/mnt/data/protonmail-show-alias.user.js)
-3. Save, then open **https://mail.proton.me** and any message.
+   - **Userscript file**: [protonmail-show-alias.user.js](https://github.com/Kimiko2547/Protonmail-Show-Alias/blob/main/protonmail-show-alias.user.js)
+   - **Install link :**: [Raw userscript](https://raw.githubusercontent.com/Kimiko2547/protonmail-show-alias/main/protonmail-show-alias.user.js)
 
 ---
 
 ## Usage
+- Open **https://mail.proton.me** and any message.
 - Press **Alt+Shift+X** *or* click the injected **Show Alias** button in the message toolbar.
 - The script will:
   1. Click **More** (⋯) → **View headers**,
@@ -36,15 +37,12 @@ Stable hooks taken from Proton’s WebClient:
 - Headers modal root: `.message-headers-modal`
 - To row label: `data-testid="recipient-label"`
 
-If Proton changes these, update the constants inside the userscript.
-
 ---
 
 ## Troubleshooting
 - **Nothing happens**: ensure Tampermonkey/Violentmonkey is enabled on `https://mail.proton.me/*`.
-- **Menu not found**: UI drift. Open DevTools → inspect More (⋯) + View headers; copy the new `data-testid` values into the script’s config.
+- **Menu not found**: report issue.
 - **Clipboard blocked**: your browser may restrict programmatic copy. The script falls back to a prompt.
-- **Alias not shown**: the `recipient-label` selector may differ. Inspect the To row and adjust.
 
 ---
 
@@ -54,7 +52,7 @@ If Proton changes these, update the constants inside the userscript.
 ---
 
 ## File list
-- `userscript/protonmail-x-original-to.user.js` — main userscript (v1.0.0).
+- `userscript/protonmail-show-alias.user.js` — main userscript (v1.0.0).
 
 ---
 
@@ -65,9 +63,9 @@ If Proton changes these, update the constants inside the userscript.
 
 ## Links
 
-- **Install:**: [Raw userscript](https://raw.githubusercontent.com/Kimiko2547/protonmail-show-alias/main/protonmail-show-alias.user.js)
-- **Homepage:**: https://github.com/Kimiko2547/protonmail-show-alias
-- **Issues:**: https://github.com/Kimiko2547/protonmail-show-alias/issues
+- **Install:** [Raw userscript](https://raw.githubusercontent.com/Kimiko2547/protonmail-show-alias/main/protonmail-show-alias.user.js)
+- **Homepage:** https://github.com/Kimiko2547/protonmail-show-alias
+- **Issues:** https://github.com/Kimiko2547/protonmail-show-alias/issues
 
 ---
 
